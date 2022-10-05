@@ -1,0 +1,26 @@
+@use "../../style/function" as function;
+
+.card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__title{
+        color: function.color(white) !important;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+
+    }
+    &__cover{
+        width: 100%;
+        min-width: 340px;
+        object-fit: cover;
+        height: 340px;
+    }
+    &__link{
+        text-decoration: none;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
