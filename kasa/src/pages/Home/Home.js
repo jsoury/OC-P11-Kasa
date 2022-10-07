@@ -7,10 +7,11 @@ import Header from "../../components/Header";
 import headerBackground from "../../assets/Home-Header-background.png";
 
 const Home = () => {
-  const { data, isLoading, error } = useFetch("./data.json");
+  const { data, isLoading, error } = useFetch(
+    "http://localhost:3000/data.json"
+  );
 
   const hostingList = data ? data : null;
-  console.log(hostingList[0]);
 
   if (error) {
     return <pre>{error}</pre>;

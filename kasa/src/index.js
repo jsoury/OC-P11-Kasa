@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Aboute from "./pages/Aboute";
+import About from "./pages/About";
 import Hosting from "./pages/Hosting";
 
 import Error from "./components/Error";
@@ -21,8 +21,8 @@ root.render(
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/hosting/:id" element={<Hosting />} />
-          <Route path="/aboute" element={<Aboute />} />
+          <Route path="hosting/:id" element={<Hosting />} />
+          <Route path="about" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Container>
