@@ -3,6 +3,8 @@ import Card from "../../components/Card";
 import { useFetch } from "../../utils/hooks/useFetch";
 import { useParams, useLocation } from "react-router-dom";
 import Collapse from "../../components/Collapse/Collapse";
+import Tag from "../../components/Tag";
+import StarRating from "../../components/Star-rating";
 
 const Hosting = () => {
   const { id } = useParams();
@@ -26,34 +28,33 @@ const Hosting = () => {
     <>
       <span>{id}</span>
       {isLoading ? (
-        <div>Loding</div>
+        <div>Loading</div>
       ) : (
         <div>
-          <Card
-            id={hosting.id}
-            title={hosting.title}
-            cover={hosting.cover}
-          ></Card>
+          <h1>{hosting.title}</h1>
+          <div>{hosting.location}</div>
+          <div className={styles.tag__wrapper}>
+            {hosting.tags.map((tag) => (
+              <Tag label={tag}></Tag>
+            ))}
+          </div>
+          <div className={styles.host__wrapper}>
+            <div className={styles.host}>
+              {hosting.host.name}
+              <img src={hosting.host.picture} alt="portrait du loueur" />
+            </div>
+            <StarRating rating={hosting.rating}></StarRating>
+          </div>
+
           <div className={styles.collapse__wrapper}>
             <Collapse label={"Description"}>
-              <p>
-                Vous serez à 50m du canal Saint-martin où vous pourrez
-                pique-niquer l'été et à côté de nombreux bars et restaurants. Au
-                cœur de Paris avec 5 lignes de métro et de nombreux bus.
-                Logement parfait pour les voyageurs en solo et les voyageurs
-                d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes
-                à pied).
-              </p>
+              <p>{hosting.description}</p>
             </Collapse>
             <Collapse label={"Équipements"}>
               <ul>
-                <li>Climatisation</li>
-                <li>Wi-Fi</li>
-                <li>Cuisine</li>
-                <li>Espace de travail</li>
-                <li>Fer à repasser</li>
-                <li>Sèche-cheveux</li>
-                <li>Cintres</li>
+                {hosting.equipments.map((equipment) => (
+                  <li>{equipment}</li>
+                ))}
               </ul>
             </Collapse>
           </div>

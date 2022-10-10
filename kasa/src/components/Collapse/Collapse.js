@@ -7,14 +7,11 @@ function Collapse({ label, children }) {
   const [maxHeight, setMaxHeight] = useState(0);
   const contentRef = useRef();
 
-  // console.log(contentRef.scrollHeight);
-
-  if (contentRef.current) console.log(contentRef.current.scrollHeight);
-
   useEffect(() => {
     if (contentRef.current.scrollHeight > maxHeight)
       setMaxHeight(contentRef.current.scrollHeight);
-  }, []);
+    console.log(maxHeight);
+  }, [contentRef, maxHeight]);
 
   function toggleOpen() {
     setOpen(!open);

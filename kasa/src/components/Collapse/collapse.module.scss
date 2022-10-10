@@ -1,9 +1,10 @@
 @use "../../style/function" as function;
 
 .collapse{
+    border: none;
     &__content {
         background-color: function.color(grey);
-        border-radius: 10px;
+        border-radius: 0 0 10px 10px;
         padding: 10px 20px;
         & ul{
             list-style: none;
@@ -23,7 +24,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
         border: none;
         background-color: function.color(primary);
         width: 100%;

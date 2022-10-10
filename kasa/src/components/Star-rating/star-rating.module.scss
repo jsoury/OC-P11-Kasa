@@ -1,0 +1,15 @@
+@use "../../style/function" as function;
+
+.starRating{
+
+    .star{
+        font-size: 44px;
+    }
+    
+    .on {
+        color: function.color(primary);
+    }
+    .off {
+        color: function.color(starGrey);
+    }
+}

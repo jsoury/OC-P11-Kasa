@@ -2,4 +2,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
-    }
+}
+.tag__wrapper{
+    display: flex;
+    gap: 15px;
+    margin: 2rem 0;
+}
+    

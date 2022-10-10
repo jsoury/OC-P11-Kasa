@@ -1,0 +1,11 @@
+@use "../../style/function" as function;
+
+.tag{
+    font-size: 14px;
+    font-weight: 500;
+    background-color: function.color(primary);
+    padding: 5px 40px;
+    text-align: center;
+    color:function.color(white);
+    border-radius: 10px;
+}
