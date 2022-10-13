@@ -3,6 +3,7 @@ import Card from "../../components/Card";
 import { useFetch } from "../../utils/hooks/useFetch";
 
 import Header from "../../components/Header";
+import Loader from "../../components/Loader";
 
 import headerBackground from "../../assets/Home-Header-background.png";
 
@@ -24,7 +25,7 @@ const Home = () => {
         background={headerBackground}
       />
       {isLoading ? (
-        <div>Loding</div>
+        <Loader />
       ) : (
         <div className={style.cardWrapper}>
           {hostingList.map((hosting) => (

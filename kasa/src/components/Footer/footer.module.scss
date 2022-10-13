@@ -1,0 +1,15 @@
+@use "../../style/function" as function;
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200px;
+    background: function.color(black);    
+    color: function.color(white); 
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 50px;   
+
+}

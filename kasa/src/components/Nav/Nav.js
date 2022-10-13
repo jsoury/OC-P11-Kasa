@@ -27,7 +27,7 @@ function Nav() {
             className={({ isActive }) =>
               isActive ? activeClassName : styles.navbar__link
             }
-            to="aboute"
+            to="about"
           >
             A Propos
           </NavLink>

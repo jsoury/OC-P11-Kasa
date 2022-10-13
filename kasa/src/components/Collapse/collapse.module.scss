@@ -2,17 +2,18 @@
 
 .collapse{
     border: none;
-    &__content {
+    &__content {        
+        height: 100%;
         background-color: function.color(grey);
         border-radius: 0 0 10px 10px;
         padding: 10px 20px;
         & ul{
             list-style: none;
+            margin: 0;
         }
     }
         
     &__contentParent {
-        height: 0px;
         overflow: hidden;
         transition: height ease 0.9s;
         
@@ -24,12 +25,25 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-        border-radius: 10px 10px 0 0;
+        border-radius: 10px;
         border: none;
         background-color: function.color(primary);
         width: 100%;
         font-size: 18px;
         font-weight: 500;
-        color: function.color(white)
+        color: function.color(white);
+        transition: border-radius 1s;
+        &__open{
+            border-radius: 10px 10px 0 0;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__arrow{
+        transform: rotate(0);
+        &__open{
+            transform: rotate(180deg);
+        }
     }
 }

@@ -7,6 +7,7 @@ function StarRating({ rating }) {
         index += 1;
         return (
           <span
+            key={`${index}-${rating}`}
             className={`${styles.star} ${
               index <= rating ? styles.on : styles.off
             }`}
