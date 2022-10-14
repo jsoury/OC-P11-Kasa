@@ -15,7 +15,6 @@ export function useFetch(url, id) {
         data = id ? data.find((hosting) => hosting.id === id) : data;
         setData(data);
       } catch (err) {
-        console.log(err);
         setError(true);
       } finally {
         setLoading(false);

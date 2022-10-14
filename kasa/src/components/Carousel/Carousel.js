@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styles from "./carousel.module.scss";
 
-import arrowRight from "../../assets/arrow-right.svg";
+import useWindowDimensions from "../../utils/hooks/useWindowDimensions";
 
+import arrowRight from "../../assets/arrow-right.svg";
 import arrowLeft from "../../assets/arrow-left.svg";
 
 export const CarouselItem = ({ children, width }) => {
@@ -44,14 +45,22 @@ const Carousel = ({ children }) => {
             updateIndex(activeIndex - 1);
           }}
         >
-          <img src={arrowLeft} alt="arrow right" />
+          <img
+            src={arrowLeft}
+            alt="arrow right"
+            className={styles.button__arrow}
+          />
         </button>
         <button
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}
         >
-          <img src={arrowRight} alt="arrow right" />
+          <img
+            src={arrowRight}
+            alt="arrow right"
+            className={styles.button__arrow}
+          />
         </button>
       </div>
     </div>

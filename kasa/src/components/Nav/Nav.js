@@ -7,7 +7,7 @@ function Nav() {
   let activeClassName = `${styles.navbar__link} ${styles.navbar__active}`;
   return (
     <nav className={styles.navbar}>
-      <Link to="/" className={styles.navbar__brand}>
+      <Link to="/" className={styles.navbar__brand} id="logo">
         <img src={logo} alt="logo Kasa"></img>
       </Link>
       <ul className={styles.navbar__links}>

@@ -1,4 +1,5 @@
 import styles from "./hosting.module.scss";
+import React, { useEffect, useState } from "react";
 import { useFetch } from "../../utils/hooks/useFetch";
 import { useParams, useLocation } from "react-router-dom";
 
@@ -7,16 +8,12 @@ import Tag from "../../components/Tag";
 import StarRating from "../../components/Star-rating";
 import Carousel, { CarouselItem } from "../../components/Carousel";
 import Loader from "../../components/Loader";
-import React, { useEffect, useRef, useState } from "react";
 
 const Hosting = () => {
   const { id } = useParams();
-  console.log(id);
   const location = useLocation();
-  console.log(location);
   const [height, setHeight] = useState([]);
-  const [maxHeight, setMaxHeight] = useState([]);
-  const collapseWrapperRef = useRef();
+  const [maxHeight, setMaxHeight] = useState(0);
 
   const { data, isLoading, error } = useFetch(
     "http://localhost:3000/data.json",
@@ -26,7 +23,6 @@ const Hosting = () => {
   const handleMaxHeight = () => {
     let max = Math.max(...height);
     setMaxHeight(max);
-    console.log(maxHeight);
   };
 
   useEffect(() => {
@@ -34,7 +30,6 @@ const Hosting = () => {
   });
 
   const hosting = data ? data : null;
-  console.log(hosting);
 
   if (error) {
     return <pre>{error}</pre>;
@@ -78,12 +73,13 @@ const Hosting = () => {
             </div>
           </header>
 
-          <div className={styles.collapse__wrapper} ref={collapseWrapperRef}>
+          <div className={styles.collapse__wrapper}>
             <Collapse
               label={"Description"}
               height={height}
               setHeight={setHeight}
               maxHeight={maxHeight}
+              setMaxHeight={setMaxHeight}
             >
               <p>{hosting.description}</p>
             </Collapse>
@@ -92,6 +88,7 @@ const Hosting = () => {
               height={height}
               setHeight={setHeight}
               maxHeight={maxHeight}
+              setMaxHeight={setMaxHeight}
             >
               <ul>
                 {hosting.equipments.map((equipment) => (

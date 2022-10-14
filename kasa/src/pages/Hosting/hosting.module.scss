@@ -1,3 +1,5 @@
+@use "../../style/mixin" as mixin;
+
 .hosting{
     &__header{
         display: flex;
@@ -10,9 +12,7 @@
         }
     }
     .collapse__wrapper{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 80px;
+        @include mixin.grid-card-responsive(2);
     }
     .tag__wrapper{
         display: flex;
@@ -38,8 +38,28 @@
                 object-fit: contain;
             }
         }
+    }
+    @include mixin.break-to(small) {
+        font-size: 14px;
+        &__header{
+            flex-direction: column;
+            & h1{
+                font-size: 18px;
+            }
+        }
+        .host__wrapper{
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            & .host{
+                font-size: 12px;
+                &__picture{
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+        }        
         
-
     }
        
 

@@ -1,8 +1,7 @@
 @use "../../style/function" as function;
+@use "../../style/mixin" as mixin;
 
-.card{
-    display: flex;
-    flex-direction: column;
+.card{    
     position: relative;
     &__title{
         color: function.color(white) !important;
@@ -16,6 +15,7 @@
         min-width: 340px;
         object-fit: cover;
         height: 340px;
+        border-radius: 10px; 
     }
     &__link{
         text-decoration: none;
@@ -23,4 +23,10 @@
             transform: scale(1.1);
         }
     }
+    @include mixin.break-to(small) {
+        &__cover{
+            min-width: 0;
+            max-height: 255px;
+        }
+    } 
 }

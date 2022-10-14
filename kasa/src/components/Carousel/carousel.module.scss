@@ -1,4 +1,5 @@
 @use "../../style/function" as function;
+@use "../../style/mixin" as mixin;
 
 .carousel{
     overflow: hidden;
@@ -45,5 +46,23 @@
         color: function.color(white);
         font-size: 18px;
         font-weight: 500;
+    }
+    @include mixin.break-to(small) {
+        &__item{
+            height: 255px;
+            & img{
+                border-radius: 10px;
+                filter: none;
+            }
+            
+        }
+        & .button__arrow{
+            height: 25px;
+            width: auto;
+        }
+        &__count{
+            visibility: hidden;
+        }
+        
     }
 }

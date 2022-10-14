@@ -21,6 +21,7 @@ const Home = () => {
   return (
     <>
       <Header
+        home
         title={"Chez vous, partout et ailleurs"}
         background={headerBackground}
       />
