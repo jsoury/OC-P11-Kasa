@@ -8,6 +8,7 @@ import Tag from "../../components/Tag";
 import StarRating from "../../components/Star-rating";
 import Carousel, { CarouselItem } from "../../components/Carousel";
 import Loader from "../../components/Loader";
+import Error from "../../components/Error";
 
 const Hosting = () => {
   const { id } = useParams();
@@ -31,8 +32,12 @@ const Hosting = () => {
 
   const hosting = data ? data : null;
 
-  if (error) {
-    return <pre>{error}</pre>;
+  if (error || !data) {
+    return (
+      <Error>
+        <pre>{error}</pre>
+      </Error>
+    );
   }
 
   return (
