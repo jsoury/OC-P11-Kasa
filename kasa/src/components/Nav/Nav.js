@@ -19,7 +19,7 @@ function Nav() {
             to="/"
             end
           >
-            Acceuil
+            Accueil
           </NavLink>
         </li>
         <li className={styles.navbar__item}>
