@@ -1,0 +1,21 @@
+@use "../../style/function" as function;
+@use "../../style/mixin" as mixin;
+
+.starRating{
+
+    .star{
+        font-size: 36px;
+    }
+    
+    .on {
+        color: function.color(primary);
+    }
+    .off {
+        color: function.color(starGrey);
+    }
+    @include mixin.break-to(small){
+        .star{
+            font-size: 22px;
+        }
+    }
+}

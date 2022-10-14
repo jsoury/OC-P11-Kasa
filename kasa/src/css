@@ -1,0 +1,44 @@
+.collapse {
+  border: none;
+}
+.collapse__content {
+  background-color: #F6F6F6;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 20px;
+}
+.collapse__content ul {
+  list-style: none;
+}
+.collapse__contentParent {
+  height: 0px;
+  overflow: hidden;
+  transition: height ease 0.9s;
+}
+.collapse__button, .collapse__button__open {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FF6060;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.collapse__button__open {
+  border-radius: 10px 10px 0 0;
+}
+.collapse__button:hover, .collapse__button__open:hover {
+  cursor: pointer;
+}
+.collapse__arrow {
+  transform: rotate(0);
+}
+.collapse__arrow__open {
+  transform: rotate(180deg);
+}
+
+/*# sourceMappingURL=css.map */

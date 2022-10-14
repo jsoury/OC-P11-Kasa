@@ -1,0 +1,13 @@
+@use "../../style/mixin" as mixin;
+
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mixin.break-to(small){
+        .header{
+            height: 223px;
+        }
+    }
+}
