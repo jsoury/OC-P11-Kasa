@@ -1,21 +1,20 @@
-@use "../../style/function" as function;
-@use "../../style/mixin" as mixin;
+@use '@/assets/style/function' as function;
+@use '@/assets/style/mixin' as mixin;
 
-.footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 200px;
-    background: function.color(black);    
-    color: function.color(white); 
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 50px; 
-    
-    @include mixin.break-to(small){
-        font-size: 12px;
-        justify-content: center;
-    }
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 200px;
+  background: function.color(black);
+  color: function.color(white);
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 50px;
 
+  @include mixin.break-to(small) {
+    font-size: 12px;
+    justify-content: center;
+  }
 }

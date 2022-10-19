@@ -1,32 +1,41 @@
-@use "../../style/function" as function;
-@use "../../style/mixin" as mixin;
+@use '@/assets/style/function' as function;
+@use '@/assets/style/mixin' as mixin;
 
-.card{    
-    position: relative;
-    &__title{
-        color: function.color(white) !important;
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-
+.card {
+  position: relative;  
+  &__title {
+    color: function.color(white) !important;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  &__cover {
+    width: 100%;
+    min-width: 340px;
+    object-fit: cover;
+    height: 340px;
+    border-radius: 10px;
+  }
+  &__link {
+    text-decoration: none;
+    &:hover {
+      transform: scale(1.1);
     }
-    &__cover{
-        width: 100%;
-        min-width: 340px;
-        object-fit: cover;
-        height: 340px;
-        border-radius: 10px; 
+  }
+  &__overlay{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @include mixin.break-to(small) {
+    &__cover {
+      min-width: 0;
+      max-height: 255px;
     }
-    &__link{
-        text-decoration: none;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
-    @include mixin.break-to(small) {
-        &__cover{
-            min-width: 0;
-            max-height: 255px;
-        }
-    } 
+  }
 }
