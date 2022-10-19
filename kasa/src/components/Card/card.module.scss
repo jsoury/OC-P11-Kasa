@@ -31,11 +31,16 @@
     top: 0;
     bottom: 0;
     right: 0;
+    max-height: 340px;
+    border-radius: 10px;
   }
   @include mixin.break-to(small) {
     &__cover {
       min-width: 0;
       max-height: 255px;
+    }
+    &__overlay{
+        max-height: 255px;
     }
   }
 }
