@@ -1,0 +1,76 @@
+@use './mixin' as mixin;
+@use './variable' as variable;
+@use './function' as function;
+
+@import url(./normalize.scss);
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: function.color(primary);
+  font-size: 1.1rem;
+  font-family: variable.$font;
+  background-color: function.color(white);
+}
+
+@for $i from 1 through 3 {
+  h#{$i} {
+    color: function.color(primary);
+    font-size: calc(3 - ($i * 0.5)) + rem;
+    @include mixin.break-to(small) {
+      font-size: calc(2 - ($i * 0.5)) + rem;
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  &.justify {
+    &__center {
+      justify-items: center;
+    }
+  }
+  &.align {
+    &__center {
+      align-items: center;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-xs-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+@media (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}

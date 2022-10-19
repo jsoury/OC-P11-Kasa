@@ -1,0 +1,9 @@
+@use '@/assets/style/mixin';
+
+.cardWrapper {
+  @include mixin.grid-card-responsive(3);
+
+  @include mixin.break-to(large) {
+    @include mixin.grid-card-responsive(2);
+  }
+}

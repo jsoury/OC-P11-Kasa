@@ -1,4 +1,4 @@
-import styles from "./loader.module.scss";
+import styles from './loader.module.scss'
 
 export default function Loader() {
   return (
@@ -9,5 +9,5 @@ export default function Loader() {
       <div className={`${styles.load__bar} ${styles.load__bar4}`}></div>
       <div className={`${styles.load__bar} ${styles.load__bar5}`}></div>
     </div>
-  );
+  )
 }

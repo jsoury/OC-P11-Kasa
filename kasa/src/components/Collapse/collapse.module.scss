@@ -1,70 +1,67 @@
-@use "../../style/function" as function;
-@use "../../style/mixin" as mixin;
+@use '@/assets/style/function' as function;
+@use '@/assets/style/mixin' as mixin;
 
-.collapse{
+.collapse {
+  border: none;
+  &__content {
+    height: 100%;
+    background-color: function.color(grey);
+    border-radius: 0 0 10px 10px;
+    padding: 10px 20px;
+    & ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__contentParent {
+    overflow: hidden;
+    transition: height ease 0.9s;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
     border: none;
-    &__content {        
-        height: 100%;
-        background-color: function.color(grey);
-        border-radius: 0 0 10px 10px;
-        padding: 10px 20px;
-        & ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+    background-color: function.color(primary);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: function.color(white);
+    transition: border-radius 1s;
+    &__open {
+      border-radius: 10px 10px 0 0;
     }
-        
-    &__contentParent {
-        overflow: hidden;
-        transition: height ease 0.9s;
-        
-    }        
-    
-    &__button{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        background-color: function.color(primary);
-        width: 100%;
-        font-size: 18px;
-        font-weight: 500;
-        color: function.color(white);
-        transition: border-radius 1s;
-        &__open{
-            border-radius: 10px 10px 0 0;
-        }
-        &:hover{
-            cursor: pointer;
-        }
+    &:hover {
+      cursor: pointer;
     }
-    &__arrow{
-        transform: rotate(0);
-        &__open{
-            transform: rotate(180deg);
-        }
+  }
+  &__arrow {
+    transform: rotate(0);
+    &__open {
+      transform: rotate(180deg);
     }
-    @include mixin.break-to(small){
-        &__button{
-            font-size: 13px;
-            padding: 5px;
-        }
-        &__arrow{
-            height: 15,2px;
-            width: 8.96px;
-            &__open{
-                height: 15,2px;
-                width: 8.96px;
-            }
-            
-        }
-        &__content{
-            font-size: 12px;
-        }
-        
+  }
+  @include mixin.break-to(small) {
+    &__button {
+      font-size: 13px;
+      padding: 5px;
     }
+    &__arrow {
+      height: 15, 2px;
+      width: 8.96px;
+      &__open {
+        height: 15, 2px;
+        width: 8.96px;
+      }
+    }
+    &__content {
+      font-size: 12px;
+    }
+  }
 }

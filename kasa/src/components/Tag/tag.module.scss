@@ -1,18 +1,18 @@
-@use "../../style/function" as function;
-@use "../../style/mixin" as mixin;
+@use '@/assets/style/function' as function;
+@use '@/assets/style/mixin' as mixin;
 
-.tag{
-    font-size: 14px;
-    font-weight: 500;
-    background-color: function.color(primary);
-    padding: 5px 40px;
-    text-align: center;
-    color:function.color(white);
-    border-radius: 10px;
+.tag {
+  font-size: 14px;
+  font-weight: 500;
+  background-color: function.color(primary);
+  padding: 5px 40px;
+  text-align: center;
+  color: function.color(white);
+  border-radius: 10px;
 
-    @include mixin.break-to(small){
-        font-size: 10px;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
+  @include mixin.break-to(small) {
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
 }
