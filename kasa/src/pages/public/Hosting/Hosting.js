@@ -15,7 +15,8 @@ const Hosting = () => {
   const [height, setHeight] = useState([])
   const [maxHeight, setMaxHeight] = useState(0)
 
-  const { data, isLoading, error } = useFetch('http://localhost:3000/data.json', id)
+  const { data, isLoading, error } = useFetch('data.json', id)
+  console.log(data)
 
   const handleMaxHeight = () => {
     let max = Math.max(...height)

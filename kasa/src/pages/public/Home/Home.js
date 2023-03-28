@@ -8,7 +8,7 @@ import Card from '@/components/Card'
 import headerBackground from '@/assets/images/components/Hero/Home-Header-background.png'
 
 const Home = () => {
-  const { data, isLoading, error } = useFetch('http://localhost:3000/data.json')
+  const { data, isLoading, error } = useFetch('data.json')
 
   const hostingList = data ? data : null
 
