@@ -1,10 +1,10 @@
 # OC-P11-Développez une application Web avec React et React Router (Kasa)
 
-[![](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fjsoury.github.io%2FOC-P6-Front-End-Fisheye)](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fjsoury.github.io%2FOC-P6-Front-End-Fisheye)
+<!-- [![](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fjsoury.github.io%2FOC-P11-Kasa%2F)](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjsoury.github.io%2FOC-P11-Kasa%2F) -->
 
 Coder une application accessible qui contient des données et plusieurs fonctionnalités assez conséquentes
 
-- voir le [projet](https://jsoury.github.io/OC-P6-Front-End-Fisheye).
+<!-- - voir le [projet](https://jsoury.github.io/OC-P11-Kasa). -->
 
 ## 1. Contexte
 
@@ -24,7 +24,7 @@ Démarrer le projet React et développer l’ensemble de l’application, les co
 
 ## 4. Démarrage
 
-[Code source](https://github.com/jsoury/OC-P6-Front-End-Fisheye)
+[Code source](https://github.com/jsoury/OC-P11-Kasa)
 
 ### 4.1. IDE
 
@@ -40,7 +40,7 @@ Démarrer le projet React et développer l’ensemble de l’application, les co
 - Clonez ce dépôt sur votre ordinateur:
 
 ```bash
-git clone https://github.com/jsoury/OC-P6-Front-End-Fisheye.git
+git clone https://github.com/jsoury/OC-P11-Kasa.git
 ```
 
 - cd kasa
