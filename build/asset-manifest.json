@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/jsoury/OC-P11-Kasa/static/css/main.9fc8655f.css",
+    "main.js": "/jsoury/OC-P11-Kasa/static/js/main.6cc5bb01.js",
+    "static/js/787.0ce615c0.chunk.js": "/jsoury/OC-P11-Kasa/static/js/787.0ce615c0.chunk.js",
+    "static/media/APropos-Header-Background.png": "/jsoury/OC-P11-Kasa/static/media/APropos-Header-Background.dabd6b5dd54e1e84e59b.png",
+    "static/media/Home-Header-background.png": "/jsoury/OC-P11-Kasa/static/media/Home-Header-background.ee4f16b8902e57a1bce2.png",
+    "static/media/Logo.svg": "/jsoury/OC-P11-Kasa/static/media/Logo.bb1c78bdbf97911cf6044e13e0c4f670.svg",
+    "static/media/Logo-White.svg": "/jsoury/OC-P11-Kasa/static/media/Logo-White.ee689fd9409d1b5a898b4247819d8a00.svg",
+    "index.html": "/jsoury/OC-P11-Kasa/index.html",
+    "static/media/arrow-right.svg": "/jsoury/OC-P11-Kasa/static/media/arrow-right.8d9545cb18f67cea4ffddb888aa4dcb0.svg",
+    "static/media/arrow-left.svg": "/jsoury/OC-P11-Kasa/static/media/arrow-left.19918a1634b1441a25ae0b50e6b1f85b.svg",
+    "main.9fc8655f.css.map": "/jsoury/OC-P11-Kasa/static/css/main.9fc8655f.css.map",
+    "main.6cc5bb01.js.map": "/jsoury/OC-P11-Kasa/static/js/main.6cc5bb01.js.map",
+    "787.0ce615c0.chunk.js.map": "/jsoury/OC-P11-Kasa/static/js/787.0ce615c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9fc8655f.css",
+    "static/js/main.6cc5bb01.js"
+  ]
+}

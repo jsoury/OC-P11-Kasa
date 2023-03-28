@@ -1,0 +1,10 @@
+{
+  "name": "kasa",
+  "version": "0.1.0",
+  "private": false,
+  "homepage":"https://github.com/jsoury/OC-P11-Kasa",
+  "scripts": {    
+    "predeploy" : "cd kasa && yarn build",
+    "deploy" : "gh-pages -d build"    
+  }  
+}

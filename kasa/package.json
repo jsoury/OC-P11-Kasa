@@ -1,7 +1,7 @@
 {
   "name": "kasa",
   "version": "0.1.0",
-  "private": true,
+  "private": false,  
   "dependencies": {
     "@craco/craco": "^6.4.5",
     "@testing-library/jest-dom": "^5.14.1",
@@ -12,13 +12,14 @@
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
     "sass": "^1.55.0",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0"    
   },
   "scripts": {
-    "start": "react-scripts start",
-    "cracoStart": "craco start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "BUILD_PATH='../build/' craco build",
+    "test": "craco test",
+    "predeploy" : "yarn build",
+    "deploy" : "gh-pages -d build",
     "eject": "react-scripts eject",
     "lint": "npx eslint src test",
     "lint:fix": "npm run lint -- --fix",
